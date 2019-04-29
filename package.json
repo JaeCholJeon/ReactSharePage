@@ -1,0 +1,28 @@
+{
+  "name": "reactsharepage",
+  "version": "1.0.0",
+  "description": "ReactSharePage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaeCholJeon/ReactSharePage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaeCholJeon/ReactSharePage/issues"
+  },
+  "homepage": "https://github.com/JaeCholJeon/ReactSharePage#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-error-handler": "^1.1.0",
+    "express-session": "^1.16.1",
+    "serve-static": "^1.13.2"
+  }
+}
