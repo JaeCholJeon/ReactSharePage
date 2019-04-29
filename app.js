@@ -5,7 +5,9 @@ const express = require('express'),
     cookieParser = require('cookie-parser'),
     static = require('serve-static'),
     expressErrorHandler = require('express-error-handler'),
-    expressSession = require('express-session');
+    expressSession = require('express-session'),
+    listRouter =  require('./list').listRouter,
+    categoryRouter = require('./category').categoryRouter;
 var app = express();
 var router = express.Router();
 const port = 10101;
@@ -17,11 +19,15 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 app.use('/', router);
+app.use('/list',listRouter);
+app.use('/category',categoryRouter);
 app.all('/',function(req,res){
     res.redirect('index');
 });
 router.route('/index').all(function (req, res) {
-    res.render('index', {});
+    res.render('index', {
+
+    });
 });
 http.createServer(app).listen(app.get('port'),function(){
     console.log('server start : '+app.get('port'));
